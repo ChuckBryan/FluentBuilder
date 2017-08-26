@@ -72,5 +72,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SimplyBuildIt\SimplyBuildIt.csproj">
+      <Project>{39cc35a7-cc2c-4e09-9fca-836e1187f40a}</Project>
+      <Name>SimplyBuildIt</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
