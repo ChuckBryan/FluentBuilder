@@ -1,4 +1,4 @@
-﻿namespace FluentBuilder.Tests
+﻿namespace SimplyBuildIt.Tests
 {
     using Shouldly;
     using Xunit;

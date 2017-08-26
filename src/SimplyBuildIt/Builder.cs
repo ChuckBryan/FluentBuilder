@@ -1,16 +1,12 @@
-namespace FluentBuilder.Tests
+namespace SimplyBuildIt
 {
     using System;
     using System.Linq.Expressions;
-    using EnsureThat;
 
     public class Builder<TBuild> where TBuild : class
 
     {
         private readonly TBuild _objectToBuild;
-
-        private readonly string _invalidExpressionError =
-            "Invalid Expression Type. Fluent Builder only supports properties";
 
 
         public Builder()
@@ -20,6 +16,7 @@ namespace FluentBuilder.Tests
             _objectToBuild = (TBuild) Activator.CreateInstance(typeToBuild, true);
         }
 
+
         public TBuild Build()
         {
             return _objectToBuild;
@@ -27,10 +24,8 @@ namespace FluentBuilder.Tests
 
         public Builder<TBuild> WithProperty(Expression<Func<TBuild, object>> expression, object value)
         {
-            Ensure.That(expression).IsNotNull();
-            Ensure.That(value).IsNotNull();
-
-
+            if (expression == null) throw new ArgumentNullException(nameof(expression));
+            if (value == null) throw new ArgumentNullException(nameof(value));
 
             // Reference type property or field
             var propertyName = _objectToBuild.GetMemberName(expression);
@@ -47,16 +42,5 @@ namespace FluentBuilder.Tests
                 .SetValue(_objectToBuild, value, null);
         }
 
-
-/*        private string GetMemberName(Expression expression)
-        {
-            Ensure.That(expression).IsNotNull();
-
-            if (!(expression is MemberExpression)) throw new InvalidOperationException(_invalidExpressionError);
-
-            var memberExpression = (MemberExpression) expression;
-
-            return memberExpression.Member.Name;
-        }*/
     }
 }

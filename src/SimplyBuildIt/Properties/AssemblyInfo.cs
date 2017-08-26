@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FluentBuilder")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("SimplyBuildIt")]
+[assembly: AssemblyDescription("A Simple Object Builder for creating Test Objects.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("FluentBuilder")]
+[assembly: AssemblyCompany("Chuck Bryan")]
+[assembly: AssemblyProduct("SimplyBuildIt")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
