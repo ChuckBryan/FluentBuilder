@@ -1,7 +1,12 @@
 # SimplyBuildIt
 This is a simple Fluent Builder used for creating instances of Entities during Testing. Most of my Entities have private Ctor, Private Setters and Factory Methods. This led to a lot of noise when creating objects to return from Mocks. Originally, I created a bunch of builders, and the usage pattern was mostly the same.
 
-# Usage
+## Download from NuGet
+```csharp
+Install-Package SimplyBuildIt -Version 1.0.0
+```
+
+## Usage
 
 ```csharp
 var employer = new Builder<Employer>()
