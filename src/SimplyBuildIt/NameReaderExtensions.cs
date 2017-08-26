@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;
-
-namespace FluentBuilder
+﻿namespace SimplyBuildIt
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq.Expressions;
+
     // Credit To: https://automatetheplanet.com/get-property-names-using-lambda-expressions/
     public static class NameReaderExtensions
     {

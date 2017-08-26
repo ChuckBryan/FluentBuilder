@@ -7,8 +7,8 @@
     <ProjectGuid>{1DE2E298-BC85-4DD8-B431-E8AA5ACE649C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FluentBuilder.Tests</RootNamespace>
-    <AssemblyName>FluentBuilder.Tests</AssemblyName>
+    <RootNamespace>SimplyBuildIt.Tests</RootNamespace>
+    <AssemblyName>SimplyBuildIt.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -64,17 +64,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Builder.cs" />
     <Compile Include="Employer.cs" />
     <Compile Include="When_Setting_Properties_With_Builder.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\FluentBuilder\FluentBuilder.csproj">
-      <Project>{39cc35a7-cc2c-4e09-9fca-836e1187f40a}</Project>
-      <Name>FluentBuilder</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
