@@ -37,7 +37,6 @@ public class Person
     {
         Ensure.That(firstName).IsNotNullOrWhiteSpace();
         Ensure.That(lastName).IsNotNullOrWhiteSpace();
-        Ensure.That(Employer).IsNotNull();
 
         FirstName = firstName;
         LastName = lastName;
