@@ -53,4 +53,4 @@ var person = new Builder<Person>()
     .WithProperty(x => x.LastName, "Kelso")
     .Build();
 ```                
-If the object that you want to build isn't complex, then go a head and use the standard Object Initializer syntax. But, if it fairly complex to create, use SimplyBuildIt.
+If the object that you want to build isn't complex, then go a head and use the standard Object Initializer syntax. But, if it complex, use SimplyBuildIt.
