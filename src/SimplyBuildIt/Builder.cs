@@ -1,7 +1,9 @@
 namespace SimplyBuildIt
 {
     using System;
+    using System.Linq;
     using System.Linq.Expressions;
+    using System.Reflection;
 
     public class Builder<TBuild> where TBuild : class
 
@@ -38,7 +40,8 @@ namespace SimplyBuildIt
 
         private void SetPropertyName(string propertyName, object value)
         {
-            typeof(TBuild).GetProperty(propertyName)
+
+            typeof(TBuild).GetTypeInfo().DeclaredProperties.First(x => x.Name == propertyName)
                 .SetValue(_objectToBuild, value, null);
         }
 
